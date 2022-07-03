@@ -81,5 +81,19 @@ namespace Moamen.Training.DataStructures.LinkedList
             }
         }
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+
+        public LinkedListNode<T> Find(T value)
+        {
+            var current = Head;
+            while (current != null)
+            {
+                if (current.Value.Equals(value))
+                {
+                    return current;
+                }
+                current = current.Next;
+            }
+            return null;
+        }
     }
 }
