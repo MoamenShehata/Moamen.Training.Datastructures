@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Moamen.Training.DataStructures.LinkedList
 {
-    public class LinkedList<T>
+    public class LinkedList<T> : IEnumerable<T>
     {
         public LinkedListNode<T> Head { get; set; }
         public LinkedListNode<T> Tail { get; set; }
@@ -69,5 +70,16 @@ namespace Moamen.Training.DataStructures.LinkedList
             Head = Head.Next;
             Count--;
         }
+
+        public IEnumerator<T> GetEnumerator()
+        {
+            var current = Head;
+            while (current != null)
+            {
+                yield return current.Value;
+                current = current.Next;
+            }
+        }
+        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
     }
 }
