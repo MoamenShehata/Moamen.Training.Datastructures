@@ -38,5 +38,17 @@ namespace Moamen.Training.DataStructures.LinkedList
 
             Count++;
         }
+
+        public void RemoveFirst()
+        {
+            if (Count == 0)
+                return;
+
+            if (Count == 1)
+                Tail = null;
+
+            Head = Head.Next;
+            Count--;
+        }
     }
 }
