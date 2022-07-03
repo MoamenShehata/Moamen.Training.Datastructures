@@ -12,6 +12,18 @@ namespace Moamen.Training.DataStructures.LinkedList
         public LinkedListNode<T> Tail { get; set; }
         public int Count { get; private set; }
 
+        public void AddFirst(LinkedListNode<T> node)
+        {
+            var temp = Head;
+
+            Head = node;
+            Head.Next = temp;
+            if (Count == 0)
+                Tail = Head;
+
+            Count++;
+        }
+
         public void AddLast(LinkedListNode<T> node)
         {
             if (Count == 0)
@@ -23,7 +35,7 @@ namespace Moamen.Training.DataStructures.LinkedList
                 Tail.Next = node;
                 Tail = node;
             }
-            
+
             Count++;
         }
     }
