@@ -39,6 +39,25 @@ namespace Moamen.Training.DataStructures.LinkedList
             Count++;
         }
 
+        public void RemoveLast()
+        {
+            if (Count == 0)
+                return;
+
+            if (Count == 1)
+                Head = null;
+
+            var current = Head;
+            while (current.Next != Tail)
+            {
+                current = current.Next;
+            }
+
+            current.Next = null;
+            Tail = current;
+            Count--;
+        }
+
         public void RemoveFirst()
         {
             if (Count == 0)
