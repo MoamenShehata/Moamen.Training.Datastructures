@@ -12,6 +12,8 @@ namespace Moamen.Training.DataStructures.Tests
             Assert.Equal(ll.Head.Value, 1);
 
             Assert.NotEqual(ll.Tail,null);
+
+            Assert.Equal(ll.Count,1);
         }
 
         [Fact]
@@ -24,6 +26,8 @@ namespace Moamen.Training.DataStructures.Tests
             Assert.Equal(ll.Head.Value, 2);
 
             Assert.Equal(ll.Tail.Value,2);
+
+            Assert.Equal(ll.Count,1);
         }
 
         [Fact]
@@ -37,6 +41,8 @@ namespace Moamen.Training.DataStructures.Tests
             Assert.Equal(ll.Head.Value, 1);
 
             Assert.Equal(ll.Tail.Value,2);
+         
+            Assert.Equal(ll.Count,2);
         }
 
 
