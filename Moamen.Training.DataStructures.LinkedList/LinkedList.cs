@@ -12,6 +12,11 @@ namespace Moamen.Training.DataStructures.LinkedList
         public LinkedListNode<T> Head { get; set; }
         public LinkedListNode<T> Tail { get; set; }
         public int Count { get; private set; }
+        
+        public void AddFirst(T value)
+        {
+            AddFirst(new LinkedListNode<T>(value));
+        }
 
         public void AddFirst(LinkedListNode<T> node)
         {
@@ -23,6 +28,11 @@ namespace Moamen.Training.DataStructures.LinkedList
                 Tail = Head;
 
             Count++;
+        }
+       
+        public void AddLast(T value)
+        {
+            AddLast(new LinkedListNode<T>(value));
         }
 
         public void AddLast(LinkedListNode<T> node)
