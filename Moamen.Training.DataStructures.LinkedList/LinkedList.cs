@@ -12,7 +12,7 @@ namespace Moamen.Training.DataStructures.LinkedList
         public LinkedListNode<T> Head { get; set; }
         public LinkedListNode<T> Tail { get; set; }
         public int Count { get; private set; }
-        
+
         public void AddFirst(T value)
         {
             AddFirst(new LinkedListNode<T>(value));
@@ -29,7 +29,7 @@ namespace Moamen.Training.DataStructures.LinkedList
 
             Count++;
         }
-       
+
         public void AddLast(T value)
         {
             AddLast(new LinkedListNode<T>(value));
@@ -79,6 +79,36 @@ namespace Moamen.Training.DataStructures.LinkedList
 
             Head = Head.Next;
             Count--;
+        }
+
+        public bool Remove(T value)
+        {
+            var current = Head;
+            LinkedListNode<T> previous = null;
+
+            while (current != null)
+            {
+                if (current.Value.Equals(value))
+                {
+                    if (previous != null)
+                    {
+                        previous.Next = current.Next;
+
+                        if (current.Next == null) // OR current == Tail
+                        {
+                            Tail = previous;
+                        }
+                    }
+                    else
+                    {
+                        RemoveFirst();
+                    }
+                    return true;
+                }
+                previous = current;
+                current = current.Next;
+            }
+            return false;
         }
 
         public IEnumerator<T> GetEnumerator()
