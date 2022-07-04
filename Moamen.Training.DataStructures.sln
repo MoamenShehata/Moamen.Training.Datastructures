@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Moamen.Training.DataStructu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Moamen.Training.DataStructures.Tests", "Moamen.Training.DataStructures.Tests\Moamen.Training.DataStructures.Tests.csproj", "{6A553A1E-D90F-4448-86E6-9F82E8A30ED4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Moamen.Training.DataStructures.Stack", "Moamen.Training.DataStructures.Stack\Moamen.Training.DataStructures.Stack.csproj", "{97363A19-5D2B-4248-BABA-8E4AE35A62D3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{6A553A1E-D90F-4448-86E6-9F82E8A30ED4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A553A1E-D90F-4448-86E6-9F82E8A30ED4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A553A1E-D90F-4448-86E6-9F82E8A30ED4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97363A19-5D2B-4248-BABA-8E4AE35A62D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97363A19-5D2B-4248-BABA-8E4AE35A62D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97363A19-5D2B-4248-BABA-8E4AE35A62D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97363A19-5D2B-4248-BABA-8E4AE35A62D3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
