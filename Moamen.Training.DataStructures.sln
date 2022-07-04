@@ -5,6 +5,8 @@ VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Moamen.Training.DataStructures.LinkedList", "Moamen.Training.DataStructures.LinkedList\Moamen.Training.DataStructures.LinkedList.csproj", "{52CC5B74-96F2-4C24-81C5-A241222D96AC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Moamen.Training.DataStructures.Tests", "Moamen.Training.DataStructures.Tests\Moamen.Training.DataStructures.Tests.csproj", "{6A553A1E-D90F-4448-86E6-9F82E8A30ED4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{52CC5B74-96F2-4C24-81C5-A241222D96AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52CC5B74-96F2-4C24-81C5-A241222D96AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{52CC5B74-96F2-4C24-81C5-A241222D96AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A553A1E-D90F-4448-86E6-9F82E8A30ED4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A553A1E-D90F-4448-86E6-9F82E8A30ED4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A553A1E-D90F-4448-86E6-9F82E8A30ED4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A553A1E-D90F-4448-86E6-9F82E8A30ED4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

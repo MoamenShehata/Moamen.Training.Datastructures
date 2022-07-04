@@ -21,4 +21,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Moamen.Training.DataStructures.LinkedList\Moamen.Training.DataStructures.LinkedList.csproj" />
+  </ItemGroup>
+
 </Project>
