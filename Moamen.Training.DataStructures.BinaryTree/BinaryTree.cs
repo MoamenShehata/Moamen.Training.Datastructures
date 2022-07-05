@@ -95,5 +95,70 @@ namespace Moamen.Training.DataStructures.BinaryTree
             }
             return current;
         }
+
+        public IEnumerable<T> PreOrder()
+        {
+            return PreOrderTraverse(root);
+        }
+
+        private IEnumerable<T> PreOrderTraverse(BinaryTreeNode<T> node)
+        {
+            if (node != null)
+            {
+                //process
+                yield return node.Value;
+
+                //visit left
+                foreach (var item in PreOrderTraverse(node.Left))
+                    yield return item;
+
+                //visit right
+                foreach (var item in PreOrderTraverse(node.Right))
+                    yield return item;
+            }
+        }
+
+        public IEnumerable<T> InOrder()
+        {
+            return InOrderTraverse(root);
+        }
+
+        private IEnumerable<T> InOrderTraverse(BinaryTreeNode<T> node)
+        {
+            if (node != null)
+            {
+                //visit left
+                foreach (var item in InOrderTraverse(node.Left))
+                    yield return item;
+                //process
+                yield return node.Value;
+
+                //visit right
+                foreach (var item in InOrderTraverse(node.Right))
+                    yield return item;
+            }
+        }
+
+        public IEnumerable<T> PostOrder()
+        {
+            return PostOrderTraverse(root);
+        }
+
+        private IEnumerable<T> PostOrderTraverse(BinaryTreeNode<T> node)
+        {
+            if (node != null)
+            {
+                //visit left
+                foreach (var item in PostOrderTraverse(node.Left))
+                    yield return item;
+
+                //visit right
+                foreach (var item in PostOrderTraverse(node.Right))
+                    yield return item;
+
+                //process
+                yield return node.Value;
+            }
+        }
     }
 }

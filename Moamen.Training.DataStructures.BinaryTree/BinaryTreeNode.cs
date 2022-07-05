@@ -22,5 +22,7 @@ namespace Moamen.Training.DataStructures.BinaryTree
         {
             return Value.CompareTo(other);
         }
+
+        public override string ToString() => Value.ToString();
     }
 }
