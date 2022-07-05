@@ -51,5 +51,49 @@ namespace Moamen.Training.DataStructures.BinaryTree
                 }
             }
         }
+
+        public BinaryTreeNode<T> Find(T value)
+        {
+            return Find(root, value);
+        }
+
+        private BinaryTreeNode<T> Find(BinaryTreeNode<T> node, T value)
+        {
+            if (node == null)
+                return null;
+
+            if (value.CompareTo(node.Value) == 0)
+                return node;
+
+            if (value.CompareTo(node.Value) < 0)
+                return Find(node.Left, value);
+
+            return Find(node.Right, value);
+        }
+
+        private BinaryTreeNode<T> FindWithParent(T value, out BinaryTreeNode<T> parent)
+        {
+            var current = root;
+            parent = null;
+
+            while (current != null)
+            {
+                if (value.CompareTo(current.Value) < 0)
+                {
+                    parent = current;
+                    current = current.Left;
+                }
+                else if (value.CompareTo(current.Value) > 0)
+                {
+                    parent = current;
+                    current = current.Right;
+                }
+                else
+                {
+                    break;
+                }
+            }
+            return current;
+        }
     }
 }
